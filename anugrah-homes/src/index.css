@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #0b0b0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b1735;
+  border-radius: 20px;
+}
+
+/* =========================
+   FLOATING ANIMATION
+========================= */
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* =========================
+   SLOW FLOATING
+========================= */
+
+@keyframes floatingSlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+.animate-floating-slow {
+  animation: floatingSlow 6s ease-in-out infinite;
+}
+
+/* =========================
+   IMAGE ZOOM
+========================= */
+
+.image-zoom {
+  transition: transform 0.7s ease;
+}
+
+.image-zoom:hover {
+  transform: scale(1.06);
+}
+
+/* =========================
+   WINE GLOW
+========================= */
+
+.wine-glow {
+  box-shadow: 0 10px 40px rgba(107, 23, 53, 0.25);
+}
+
+/* =========================
+   SELECTION
+========================= */
+
+::selection {
+  background: #6b1735;
+  color: #ffffff;
+}
