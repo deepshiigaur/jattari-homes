@@ -9,7 +9,7 @@ const links = [
   { name: "Why Jattari", path: "/why-jattari" },
   { name: "FAQ", path: "/faq" },
   { name: "Blog", path: "/blog" },
-  { name: "Contact Us", path: "/contact" },
+  { name: "Contact Us", path: "/contact-us" },
 ];
 
 export default function Navbar() {
@@ -73,7 +73,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:block">
           <NavLink
-            to="/contact"
+            to="/contact-us"
             className="group flex items-center gap-2 rounded-full bg-wine px-5 py-3 text-sm font-semibold text-white transition hover:bg-wine-dark hover:shadow-lg"
           >
             Enquire Now
@@ -118,7 +118,7 @@ export default function Navbar() {
             ))}
 
             <NavLink
-              to="/contact"
+              to="/contact-us"
               onClick={closeMenu}
               className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-wine px-5 py-3 font-semibold text-white transition hover:bg-wine-dark"
             >
