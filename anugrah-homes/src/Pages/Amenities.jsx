@@ -28,14 +28,15 @@ const Amenities = () => {
   return (
     <div className="pt-20">
 
-      <section className="bg-black text-white py-24">
-        <div className="max-w-7xl mx-auto px-5">
+      {/* ================= HERO ================= */}
+      <section className="bg-black py-24 text-white">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
 
-          <p className="text-[#c9859e] uppercase tracking-[0.3em] text-xs font-bold">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#c9859e]">
             Lifestyle
           </p>
 
-          <h1 className="text-5xl sm:text-6xl font-serif font-bold mt-4">
+          <h1 className="mt-4 font-serif text-5xl font-bold leading-tight sm:text-6xl">
             Amenities for
             <br />
             everyday living.
@@ -44,48 +45,63 @@ const Amenities = () => {
         </div>
       </section>
 
-      <section className="py-20 sm:py-28 bg-white">
+      {/* ================= AMENITIES ================= */}
+      <section className="relative overflow-hidden py-20 sm:py-28">
 
-        <div className="max-w-7xl mx-auto px-5">
+        {/* ================= BACKGROUND IMAGE ================= */}
+        <img
+          src="/images/Amenities.jpg"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
+        {/* ================= WHITE OVERLAY ================= */}
+        <div className="absolute inset-0 bg-white/50 backdrop-blur-sm" />
+
+        {/* ================= CONTENT ================= */}
+        <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
+
+          {/* Section Heading */}
           <SectionHeading
             eyebrow="Amenities"
             title="Comfort meets convenience"
             text="Explore facilities designed to support a comfortable community lifestyle."
           />
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          {/* ================= AMENITY CARDS ================= */}
+          <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
 
             {amenities.map(([title, Icon], index) => (
               <motion.div
                 key={title}
                 initial={{
                   opacity: 0,
-                  scale: 0.9,
+                  y: 30,
                 }}
                 whileInView={{
                   opacity: 1,
-                  scale: 1,
+                  y: 0,
                 }}
                 viewport={{
                   once: true,
                 }}
                 transition={{
+                  duration: 0.5,
                   delay: index * 0.08,
                 }}
                 whileHover={{
                   y: -7,
                 }}
-                className="border border-gray-200 rounded-3xl p-6 sm:p-8 text-center hover:border-[#6B1735] hover:shadow-lg transition"
+                className="rounded-3xl border border-white/70 bg-white/80 p-6 text-center shadow-lg backdrop-blur-md transition duration-300 hover:border-[#6B1735] hover:shadow-xl sm:p-8"
               >
 
-                <div className="w-14 h-14 bg-[#F3E8EC] text-[#6B1735] rounded-2xl mx-auto flex items-center justify-center">
-
+                {/* Icon */}
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F3E8EC] text-[#6B1735]">
                   <Icon size={28} />
-
                 </div>
 
-                <h3 className="font-semibold mt-5">
+                {/* Title */}
+                <h3 className="mt-5 font-semibold text-gray-900">
                   {title}
                 </h3>
 
@@ -95,7 +111,6 @@ const Amenities = () => {
           </div>
 
         </div>
-
       </section>
 
     </div>

@@ -29,9 +29,13 @@ export default function Navbar() {
           onClick={closeMenu}
           className="flex items-center gap-2"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-wine text-lg font-bold text-white shadow-md">
-            AH
-          </div>
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gray-100 shadow-md">
+    <img
+      src="/images/logo.png"
+      alt="Jattari Real Estate"
+      className="h-10 w-10 object-contain"
+    />
+  </div>
 
           <div>
             <h1 className="text-lg font-bold leading-tight text-black sm:text-xl">

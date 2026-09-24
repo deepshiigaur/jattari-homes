@@ -12,6 +12,7 @@ import WhyJattari from "./Pages/WhyJattari";
 import FAQ from "./Pages/FAQ";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
+import Amenities from "./Pages/Amenities";
 
 function App() {
   const [showLogin, setShowLogin] = useState(true);
@@ -39,6 +40,7 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/amenities" element={<Amenities />} />
       </Routes>
 
       <Footer />

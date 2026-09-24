@@ -128,9 +128,9 @@ const Home = () => {
             >
               <div className="overflow-hidden rounded-3xl">
                 <img
-                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
-                  alt="Jattari Homes"
-                  className="h-105 w-full object-cover transition duration-700 hover:scale-105 sm:h-122.5"
+                src="/images/Home.jpg"
+                alt="Jattari Homes"
+                className="h-122.5 w-full rounded-3xl object-cover"
                 />
               </div>
 
@@ -143,7 +143,7 @@ const Home = () => {
                 className="absolute -bottom-6 left-4 rounded-2xl bg-[#6B1735] p-5 text-white shadow-2xl sm:-left-8 sm:p-7"
               >
                 <p className="text-3xl font-bold sm:text-4xl">
-                  360°
+
                 </p>
 
                 <p className="mt-1 text-sm text-white/80">
